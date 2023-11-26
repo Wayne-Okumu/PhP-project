@@ -1,15 +1,13 @@
 <?php
-// Ensure the session is started on every page where you want to access session variables
+
 session_start();
 
-// Check if the user is logged in
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['email'])) {
-    // Redirect to the login page if not logged in
+
     header('Location: index.html');
     exit();
 }
 
-// Display the dashboard content
 ?>
 
 <!DOCTYPE html>
